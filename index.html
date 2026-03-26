@@ -1,12 +1,148 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Damon Lyu</title>
-  <meta charset="utf-8">
-</head>
-<body>
-  <h1>🚀 我的个人网站上线了</h1>
-  <p>欢迎来到 damonlyu.com</p>
-  <p>这是我的第一个网站</p>
-</body>
-</html>
+export default function DamonSite() {
+  return (
+    <div className="min-h-screen bg-black text-white overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.25),transparent_35%),radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.2),transparent_30%),radial-gradient(circle_at_20%_80%,rgba(16,185,129,0.18),transparent_25%)]" />
+      <div className="absolute inset-0 opacity-20 [background-image:linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] [background-size:48px_48px]" />
+
+      <main className="relative mx-auto max-w-6xl px-6 py-16 md:px-10 md:py-24">
+        <section className="grid items-center gap-12 md:grid-cols-2">
+          <div>
+            <div className="mb-4 inline-flex items-center rounded-full border border-white/15 bg-white/5 px-4 py-1 text-sm text-white/80 backdrop-blur">
+              <span className="mr-2 h-2 w-2 rounded-full bg-emerald-400" />
+              Personal Website · Damon Lyu
+            </div>
+
+            <h1 className="text-5xl font-black leading-tight tracking-tight md:text-7xl">
+              你好，<br />
+              我是 <span className="bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent">Damon</span>
+            </h1>
+
+            <p className="mt-6 max-w-xl text-lg leading-8 text-white/75 md:text-xl">
+              一个喜欢把想法变成产品的人。关注 AI、自动化、效率工具和酷一点的网页体验。
+              这里是我的个人小站，也是我的数字名片。
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a
+                href="#about"
+                className="rounded-2xl border border-cyan-300/40 bg-cyan-400/10 px-6 py-3 text-sm font-medium text-cyan-200 shadow-[0_0_40px_rgba(34,211,238,0.15)] transition hover:scale-[1.02] hover:bg-cyan-400/20"
+              >
+                了解我
+              </a>
+              <a
+                href="#contact"
+                className="rounded-2xl border border-white/15 bg-white/5 px-6 py-3 text-sm font-medium text-white/85 backdrop-blur transition hover:scale-[1.02] hover:bg-white/10"
+              >
+                联系方式
+              </a>
+            </div>
+
+            <div className="mt-10 flex flex-wrap gap-3 text-sm text-white/60">
+              {['AI Enthusiast', 'Builder', 'Automation', 'Creative Web'].map((tag) => (
+                <span key={tag} className="rounded-full border border-white/10 bg-white/5 px-4 py-2">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="relative">
+            <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-r from-cyan-500/20 via-blue-500/10 to-purple-500/20 blur-3xl" />
+            <div className="relative rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-2xl backdrop-blur-xl">
+              <div className="mb-4 flex items-center gap-2">
+                <span className="h-3 w-3 rounded-full bg-red-400" />
+                <span className="h-3 w-3 rounded-full bg-yellow-400" />
+                <span className="h-3 w-3 rounded-full bg-green-400" />
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-black/50 p-6 font-mono text-sm text-green-300">
+                <p>&gt; init profile</p>
+                <p className="mt-2 text-white/80">name: Damon Lyu</p>
+                <p className="text-white/80">role: Explorer / Builder</p>
+                <p className="text-white/80">focus: AI · Web · Tools</p>
+                <p className="text-white/80">status: crafting something cool...</p>
+                <p className="mt-3 animate-pulse text-cyan-300">_</p>
+              </div>
+
+              <div className="mt-6 grid grid-cols-3 gap-4">
+                {[
+                  ['01', '想法落地'],
+                  ['02', '页面审美'],
+                  ['03', '效率追求'],
+                ].map(([num, label]) => (
+                  <div key={num} className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center">
+                    <div className="text-lg font-bold text-cyan-300">{num}</div>
+                    <div className="mt-1 text-sm text-white/70">{label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="about" className="mt-24 grid gap-6 md:grid-cols-3">
+          {[
+            {
+              title: '我在做什么',
+              text: '关注 AI 应用、自动化流程、个人效率工具，也喜欢尝试把复杂东西做得更简单。',
+            },
+            {
+              title: '我的风格',
+              text: '偏爱简洁、直接、有一点未来感。既想东西能用，也希望它看起来足够酷。',
+            },
+            {
+              title: '这个网站',
+              text: '它会逐步加入我的介绍、作品、想法和实验记录，慢慢变成一个真正属于我的主页。',
+            },
+          ].map((item) => (
+            <div
+              key={item.title}
+              className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 shadow-xl backdrop-blur"
+            >
+              <h3 className="text-xl font-semibold text-white">{item.title}</h3>
+              <p className="mt-4 leading-7 text-white/70">{item.text}</p>
+            </div>
+          ))}
+        </section>
+
+        <section className="mt-24">
+          <div className="mb-8 flex items-end justify-between gap-4">
+            <div>
+              <p className="text-sm uppercase tracking-[0.3em] text-cyan-300/80">Highlights</p>
+              <h2 className="mt-2 text-3xl font-bold md:text-4xl">我想打造的数字形象</h2>
+            </div>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2">
+            {[
+              ['酷一点', '不是普通简历页，而是有个人气质的主页。'],
+              ['真一点', '写真实的兴趣、方向和在做的事情。'],
+              ['简一点', '不堆太多内容，重点突出。'],
+              ['长久一点', '以后可以继续扩展成博客、作品集和个人品牌站。'],
+            ].map(([title, text]) => (
+              <div key={title} className="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/8 to-white/4 p-6">
+                <div className="text-xl font-semibold text-white">{title}</div>
+                <div className="mt-3 leading-7 text-white/70">{text}</div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="contact" className="mt-24">
+          <div className="rounded-[2rem] border border-cyan-400/20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 p-8 backdrop-blur-xl md:p-10">
+            <p className="text-sm uppercase tracking-[0.3em] text-cyan-200/80">Contact</p>
+            <h2 className="mt-3 text-3xl font-bold md:text-4xl">很高兴你来到这里</h2>
+            <p className="mt-4 max-w-2xl text-white/75 leading-8">
+              这个网站刚刚起步，后面我会继续把它打磨得更完整、更有个性。如果你愿意，也可以把这里当作认识我的第一站。
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-4 text-sm text-white/80">
+              <div className="rounded-2xl border border-white/10 bg-black/20 px-5 py-3">Domain: damonlyu.com</div>
+              <div className="rounded-2xl border border-white/10 bg-black/20 px-5 py-3">Status: Online</div>
+              <div className="rounded-2xl border border-white/10 bg-black/20 px-5 py-3">Next: Projects / Blog / Ideas</div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  );
+}
